@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Angular 2 QuickStart</title>
+
+    <!-- 1. Carregam as bibliotecas da aplicação -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+
+    <!-- 2. Configura o SystemJS, que é responsável por carregar os arquivos js assincronamente -->
+    <script>
+      System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/js/boot').then(null, console.error.bind(console));
+    </script>
+
+</head>
+
+<!-- 3. Exibe a aplicação -->
+
+<body class="container">
+    <meu-app>Carregando...</meu-app>
+</body>
+
+</html>
